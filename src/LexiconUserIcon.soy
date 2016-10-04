@@ -1,0 +1,57 @@
+{namespace LexiconUserIcon}
+
+/**
+ * This renders a user icon element based on the lexicon user icon definition
+ * found at http://liferay.github.io/lexicon/content/user-icons/
+ *
+ * @param? border
+ * @param? cssClass
+ * @param? icon
+ * @param? iconCssClass
+ * @param? image
+ * @param? level
+ * @param? name
+ * @param? size
+ * @param? spritemap
+ */
+{template .render}
+	{let $userIconCssClass kind="text"}
+		user-icon{$border ? ' user-icon-' + $border : ''} user-icon-{$level ?: 'default'}{$size ? ' user-icon-' + $size : ''}{$cssClass ? ' ' + $cssClass : ''}
+	{/let}
+
+	<div class="{$userIconCssClass}">
+		{if isNonnull($icon)}
+			{call .icon data="all" /}
+		{elseif isNonnull($image)}
+			{call .image data="all" /}
+		{elseif isNonnull($name)}
+			{call .name data="all" /}
+		{/if}
+	</div>
+{/template}
+
+/**
+ * @param icon
+ * @param? iconCssClass
+ * @param? spritemap
+ */
+{template .icon}
+	{call LexiconIcon.render data="all"}
+		{param cssClass: $iconCssClass /}
+		{param sybmol: $icon /}
+	{/call}
+{/template}
+
+/**
+ * @param image
+ */
+{template .image}
+	<img alt="thumbnail" class="img-responsive" src="{$image}">
+{/template}
+
+/**
+ * @param name
+ */
+{template .name}
+	<span>{$name}</span>
+{/template}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Demo: User Icon</title>
+
+		<link rel="stylesheet" href="../node_modules/lexicon-ux/build/css/lexicon-base.css">
+		<script src="../build/globals/user-icon.js"></script>
+
+		<style>
+			body {
+				padding: 10px;
+			}
+
+			.user-icon {
+				margin: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Lexicon User Icon Component</h1>
+
+		<h2>Default</h2>
+		<div id="default"></div>
+
+		<h2>User Icon Levels</h2>
+		<div id="levels"></div>
+
+		<h2>User Icon Sizes</h2>
+		<div id="sizes"></div>
+
+		<h2>User Icon Borders</h2>
+		<div id="borders"></div>
+
+		<h2>User Icon Image</h2>
+		<div id="image"></div>
+
+		<h2>User Icon Icons</h2>
+		<div id="icons"></div>
+
+		<script type="text/javascript">
+			var borders = ['circle', 'rounded', 'square'];
+			var icons = ['add-cell', 'calendar', 'cog', 'picture', 'thumbs-up'];
+			var levels = ['default', 'primary', 'info', 'success', 'warning', 'danger'];
+			var sizes = ['xs', 'sm', 'lg', 'xl', 'xxl'];
+			var spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
+
+			new metal.LexiconUserIcon(
+				{
+					name: 'TT'
+				},
+				'#default'
+			);
+
+			levels.forEach(
+				function(level, index) {
+					new metal.LexiconUserIcon(
+						{
+							level: level,
+							name: level.substring(0, 2)
+						},
+						'#levels'
+					);
+				}
+			);
+
+			sizes.forEach(
+				function(size, index) {
+					new metal.LexiconUserIcon(
+						{
+							name: size,
+							size: size
+						},
+						'#sizes'
+					);
+				}
+			);
+
+			borders.forEach(
+				function(border, index) {
+					new metal.LexiconUserIcon(
+						{
+							border: border,
+							name: border.substring(0, 2)
+						},
+						'#borders'
+					);
+				}
+			);
+
+			new metal.LexiconUserIcon(
+				{
+					image: './images/thumbnail_placeholder.gif'
+				},
+				'#image'
+			);
+
+			icons.forEach(
+				function(icon, index) {
+					new metal.LexiconUserIcon(
+						{
+							icon: icon,
+							spritemap: spritemap
+						},
+						'#icons'
+					);
+				}
+			);
+		</script>
+	</body>
+</html>
