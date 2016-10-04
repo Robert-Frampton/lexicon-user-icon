@@ -45,7 +45,7 @@
 			var sizes = ['xs', 'sm', 'lg', 'xl', 'xxl'];
 			var spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 
-			new metal.LexiconUserIcon(
+			new Lexicon.LexiconUserIcon(
 				{
 					name: 'TT'
 				},
@@ -54,7 +54,7 @@
 
 			levels.forEach(
 				function(level, index) {
-					new metal.LexiconUserIcon(
+					new Lexicon.LexiconUserIcon(
 						{
 							level: level,
 							name: level.substring(0, 2)
@@ -66,7 +66,7 @@
 
 			sizes.forEach(
 				function(size, index) {
-					new metal.LexiconUserIcon(
+					new Lexicon.LexiconUserIcon(
 						{
 							name: size,
 							size: size
@@ -78,7 +78,7 @@
 
 			borders.forEach(
 				function(border, index) {
-					new metal.LexiconUserIcon(
+					new Lexicon.LexiconUserIcon(
 						{
 							border: border,
 							name: border.substring(0, 2)
@@ -88,7 +88,7 @@
 				}
 			);
 
-			new metal.LexiconUserIcon(
+			new Lexicon.LexiconUserIcon(
 				{
 					image: './images/thumbnail_placeholder.gif'
 				},
@@ -97,7 +97,7 @@
 
 			icons.forEach(
 				function(icon, index) {
-					new metal.LexiconUserIcon(
+					new Lexicon.LexiconUserIcon(
 						{
 							icon: icon,
 							spritemap: spritemap
