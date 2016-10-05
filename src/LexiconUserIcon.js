@@ -21,28 +21,6 @@ class LexiconUserIcon extends Component {
  */
 LexiconUserIcon.STATE = {
 	/**
-	 * Border styling for user icon's main container
-	 * @default undefined
-	 * @instance
-	 * @memberof LexiconUserIcon
-	 * @type {string}
-	 */
-	border: {
-		validator: core.isString
-	},
-
-	/**
-	 * CSS class (or list of classes) for styling the user icon's main container
-	 * @default undefined
-	 * @instance
-	 * @memberof LexiconUserIcon
-	 * @type {string}
-	 */
-	cssClass: {
-		validator: core.isString
-	},
-
-	/**
 	 * Id of the icon to show from the list of available icons
 	 * @default undefined
 	 * @instance
@@ -54,13 +32,13 @@ LexiconUserIcon.STATE = {
 	},
 
 	/**
-	 * CSS class (or list of classes) for styling the icon's main container
+	 * Element classes for styling the icon's main container
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconUserIcon
 	 * @type {string}
 	 */
-	iconCssClass: {
+	iconElementClasses: {
 		validator: core.isString
 	},
 
@@ -94,6 +72,17 @@ LexiconUserIcon.STATE = {
 	 * @type {string}
 	 */
 	name: {
+		validator: core.isString
+	},
+
+	/**
+	 * Determines shape of user icon's main container.
+	 * @default undefined
+	 * @instance
+	 * @memberof LexiconUserIcon
+	 * @type {string}
+	 */
+	shape: {
 		validator: core.isString
 	},
 

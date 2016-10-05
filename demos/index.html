@@ -29,8 +29,8 @@
 		<h2>User Icon Sizes</h2>
 		<div id="sizes"></div>
 
-		<h2>User Icon Borders</h2>
-		<div id="borders"></div>
+		<h2>User Icon Shapes</h2>
+		<div id="shapes"></div>
 
 		<h2>User Icon Image</h2>
 		<div id="image"></div>
@@ -39,9 +39,9 @@
 		<div id="icons"></div>
 
 		<script type="text/javascript">
-			var borders = ['circle', 'rounded', 'square'];
 			var icons = ['add-cell', 'calendar', 'cog', 'picture', 'thumbs-up'];
 			var levels = ['default', 'primary', 'info', 'success', 'warning', 'danger'];
+			var shapes = ['circle', 'rounded', 'square'];
 			var sizes = ['xs', 'sm', 'lg', 'xl', 'xxl'];
 			var spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 
@@ -76,14 +76,14 @@
 				}
 			);
 
-			borders.forEach(
-				function(border, index) {
+			shapes.forEach(
+				function(shape, index) {
 					new Lexicon.LexiconUserIcon(
 						{
-							border: border,
-							name: border.substring(0, 2)
+							name: shape.substring(0, 2),
+							shape: shape
 						},
-						'#borders'
+						'#shapes'
 					);
 				}
 			);

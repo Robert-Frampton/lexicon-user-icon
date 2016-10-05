@@ -11,30 +11,30 @@ describe('LexiconUserIcon', () => {
 		}
 	});
 
-	it('should render user icon with border helper class', () => {
-		userIcon = new LexiconUserIcon({
-			border: 'rounded',
-			name: 'TT'
-		});
-
-		assert.strictEqual(userIcon.element.outerHTML, __html__['test/fixture/testBorderLexiconUserIcon.html']);
-	});
-
-	it('should append the provided css class to the button markup', () => {
-		userIcon = new LexiconUserIcon({
-			cssClass: 'css-class',
-			name: 'TT'
-		});
-
-		assert.strictEqual(userIcon.element.outerHTML, __html__['test/fixture/testCssClassLexiconUserIcon.html']);
-	});
-
 	it('should render default user icon', () => {
 		userIcon = new LexiconUserIcon({
 			name: 'TT'
 		});
 
 		assert.strictEqual(userIcon.element.outerHTML, __html__['test/fixture/testDefaultLexiconUserIcon.html']);
+	});
+
+	it('should render user icon with shape helper class', () => {
+		userIcon = new LexiconUserIcon({
+			name: 'TT',
+			shape: 'rounded'
+		});
+
+		assert.strictEqual(userIcon.element.outerHTML, __html__['test/fixture/testShapeLexiconUserIcon.html']);
+	});
+
+	it('should append the provided element class to the button markup', () => {
+		userIcon = new LexiconUserIcon({
+			elementClasses: 'css-class',
+			name: 'TT'
+		});
+
+		assert.strictEqual(userIcon.element.outerHTML, __html__['test/fixture/testElementClassesLexiconUserIcon.html']);
 	});
 
 	it('should render a lexicon icon inside the user icon using the provided spritemap and symbol', () => {
