@@ -45,69 +45,43 @@
 			var sizes = ['xs', 'sm', 'lg', 'xl', 'xxl'];
 			var spritemap = '../node_modules/lexicon-ux/build/images/icons/icons.svg';
 
-			new Lexicon.LexiconUserIcon(
-				{
-					name: 'TT'
-				},
-				'#default'
-			);
+			new Lexicon.LexiconUserIcon({
+				name: 'TT'
+			}, '#default');
 
-			levels.forEach(
-				function(level, index) {
-					new Lexicon.LexiconUserIcon(
-						{
-							level: level,
-							name: level.substring(0, 2)
-						},
-						'#levels'
-					);
-				}
-			);
+			levels.forEach(function(level, index) {
+				new Lexicon.LexiconUserIcon({
+					level: level,
+					name: level.substring(0, 2)
+				}, '#levels');
+			});
 
-			sizes.forEach(
-				function(size, index) {
-					new Lexicon.LexiconUserIcon(
-						{
-							name: size,
-							size: size
-						},
-						'#sizes'
-					);
-				}
-			);
+			sizes.forEach(function(size, index) {
+				new Lexicon.LexiconUserIcon({
+					name: size,
+					size: size
+				}, '#sizes');
+			});
 
-			shapes.forEach(
-				function(shape, index) {
-					new Lexicon.LexiconUserIcon(
-						{
-							name: shape.substring(0, 2),
-							shape: shape
-						},
-						'#shapes'
-					);
-				}
-			);
+			shapes.forEach(function(shape, index) {
+				new Lexicon.LexiconUserIcon({
+					name: shape.substring(0, 2),
+					shape: shape
+				}, '#shapes');
+			});
 
-			new Lexicon.LexiconUserIcon(
-				{
-					image: './images/thumbnail_placeholder.gif'
-				},
-				'#image'
-			);
+			new Lexicon.LexiconUserIcon({
+				image: './images/thumbnail_placeholder.gif'
+			}, '#image');
 
-			icons.forEach(
-				function(symbol, index) {
-					new Lexicon.LexiconUserIcon(
-						{
-							icon: {
-								symbol: symbol
-							},
-							spritemap: spritemap
-						},
-						'#icons'
-					);
-				}
-			);
+			icons.forEach(function(symbol, index) {
+				new Lexicon.LexiconUserIcon({
+					icon: {
+						symbol: symbol
+					},
+					spritemap: spritemap
+				}, '#icons');
+			});
 		</script>
 	</body>
 </html>
