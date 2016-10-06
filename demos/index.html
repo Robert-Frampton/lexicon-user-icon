@@ -96,10 +96,12 @@
 			);
 
 			icons.forEach(
-				function(icon, index) {
+				function(symbol, index) {
 					new Lexicon.LexiconUserIcon(
 						{
-							icon: icon,
+							icon: {
+								symbol: symbol
+							},
 							spritemap: spritemap
 						},
 						'#icons'

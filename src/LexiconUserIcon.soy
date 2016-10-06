@@ -6,13 +6,11 @@
  *
  * @param? elementClasses
  * @param? icon
- * @param? iconElementClasses
  * @param? image
  * @param? level
  * @param? name
  * @param? shape
  * @param? size
- * @param? spritemap
  */
 {template .render}
 	{let $userIconElementClasses kind="text"}
@@ -32,13 +30,11 @@
 
 /**
  * @param icon
- * @param? iconElementClasses
- * @param? spritemap
  */
 {template .icon}
 	{call LexiconIcon.render data="all"}
-		{param cssClass: $iconElementClasses /}
-		{param sybmol: $icon /}
+		{param elementClasses: $icon.elementClasses /}
+		{param symbol: $icon.symbol /}
 	{/call}
 {/template}
 

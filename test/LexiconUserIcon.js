@@ -39,7 +39,10 @@ describe('LexiconUserIcon', () => {
 
 	it('should render a lexicon icon inside the user icon using the provided spritemap and symbol', () => {
 		userIcon = new LexiconUserIcon({
-			icon: 'calendar',
+			icon: {
+				elementClasses: 'icon-class',
+				symbol: 'calendar'
+			},
 			spritemap: 'spritemap'
 		});
 

@@ -21,29 +21,18 @@ class LexiconUserIcon extends Component {
  */
 LexiconUserIcon.STATE = {
 	/**
-	 * Id of the icon to show from the list of available icons
+	 * Symbol and elementClasses of icon component.
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconUserIcon
-	 * @type {string}
+	 * @type {!{elementClasses: string, symbol: string}}
 	 */
 	icon: {
-		validator: core.isString
+		validator: core.isObject
 	},
 
 	/**
-	 * Element classes for styling the icon's main container
-	 * @default undefined
-	 * @instance
-	 * @memberof LexiconUserIcon
-	 * @type {string}
-	 */
-	iconElementClasses: {
-		validator: core.isString
-	},
-
-	/**
-	 * Url of image
+	 * Url of image.
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconUserIcon
@@ -54,7 +43,7 @@ LexiconUserIcon.STATE = {
 	},
 
 	/**
-	 * Level of user icon, value appended to user-icon-
+	 * Level of user icon, value appended to "user-icon-".
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconUserIcon
@@ -65,7 +54,7 @@ LexiconUserIcon.STATE = {
 	},
 
 	/**
-	 * Text value centered inside user icon
+	 * Text value centered inside user icon element.
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconUserIcon
@@ -87,24 +76,13 @@ LexiconUserIcon.STATE = {
 	},
 
 	/**
-	 * Size of user icon
+	 * Size of user icon.
 	 * @default undefined
 	 * @instance
 	 * @memberof LexiconUserIcon
 	 * @type {string}
 	 */
 	size: {
-		validator: core.isString
-	},
-
-	/**
-	 * Path to the spritemap file with the icons
-	 * @default undefined
-	 * @instance
-	 * @memberof LexiconUserIcon
-	 * @type {string}
-	 */
-	spritemap: {
 		validator: core.isString
 	}
 };
